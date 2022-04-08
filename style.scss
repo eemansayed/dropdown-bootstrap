@@ -13,6 +13,7 @@ body {
 
 @mixin dropdownContainer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -41,34 +42,112 @@ body {
   color: #dee2e6;
 }
 
+@mixin dropdownStyles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 175px;
+  height: 175px;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding-top: 10px;
+}
+
+@mixin items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
 .dropdown-section {
   @include dropdownSection();
+  padding-left: 10px;
   .container {
     @include dropdownContainer();
     .top {
       .dropdown {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 175px;
-        height: 200px;
-        background-color: pink;
-        border-radius: 6px;
-        padding-top: 10px;
+        @include dropdownStyles();
         .items {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          .items {
-            hr {
-              @include hr();
-            }
-            .item {
-              .link {
-                @include textWhiteBackground();
-              }
+          @include items();
+          hr {
+            @include hr();
+          }
+          .item.active {
+            background-color: #0d6efd;
+            pointer-events: none;
+            cursor: pointer;
+            .link {
+              color: #fff;
             }
           }
+          .item {
+            padding-left: 10px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            .link {
+              @include textWhiteBackground();
+            }
+            &:hover {
+              background-color: #e9ecef;
+            }
+          }
+        }
+      }
+    }
+    .bottom {
+      .dropdown {
+        @include dropdownStyles();
+        background-color: #343a40;
+        .items {
+          @include items;
+          hr {
+            @include hr();
+            background-color: #565c61;
+          }
+
+          .item.active {
+            background-color: #0d6efd;
+            pointer-events: none;
+            cursor: pointer;
+            .link {
+              color: #fff;
+            }
+          }
+          .item {
+            padding-left: 10px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            .link {
+              @include textDarkBackground();
+            }
+            &:hover {
+              background-color: #52575d;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .dropdown-section {
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      .top {
+        .dropdown {
+          width: 200px;
+        }
+      }
+
+      .bottom {
+        .dropdown {
+          width: 200px;
         }
       }
     }
