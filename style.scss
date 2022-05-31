@@ -259,6 +259,50 @@ body {
   }
 }
 
+.dropdown-section.icon-list {
+  .container {
+    .top {
+      .dropdown {
+        padding-bottom: 10px;
+        height: 230px;
+        width: 200px;
+        .items {
+          .item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding-left: 15px;
+          }
+          .item.red {
+            display: flex;
+            align-items: center;
+            padding-top: 0;
+
+            &:hover {
+              background-color: #dc3545;
+              color: #fff;
+              cursor: pointer;
+            }
+            .icon {
+              svg {
+                fill: #dc3545;
+              }
+            }
+            .link {
+              color: #dc3545;
+              width: 100%;
+
+              &:hover {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 800px) {
   .dropdown-section {
     .container {
