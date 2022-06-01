@@ -278,25 +278,50 @@ body {
             align-items: center;
             padding-top: 0;
 
-            &:hover {
+            &:hover,
+            .link:hover {
               background-color: #dc3545;
               color: #fff;
+              fill: #fff;
               cursor: pointer;
             }
-            .icon {
-              svg {
-                fill: #dc3545;
-              }
+
+            svg {
+              fill: #dc3545;
             }
+
             .link {
               color: #dc3545;
               width: 100%;
-
-              &:hover {
-                color: #fff;
-              }
             }
           }
+        }
+      }
+    }
+
+    .bottom {
+      .dropdown {
+        padding-bottom: 10px;
+        height: 230px;
+        width: 200px;
+        .items {
+          .item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding-left: 15px;
+          }
+          .item.red {
+            display: flex;
+            align-items: center;
+            padding-top: 0;
+          }
+
+          svg {
+            fill: #dee2e6;
+          }
+
+          //}
         }
       }
     }
