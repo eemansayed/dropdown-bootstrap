@@ -328,6 +328,17 @@ body {
   }
 }
 
+.dropdown-section.calendar {
+  .container {
+    .top {
+      .dropdown {
+        .items {
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 800px) {
   .dropdown-section {
     .container {
