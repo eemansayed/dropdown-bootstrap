@@ -276,6 +276,98 @@ body {
   fill: #dee2e6;
 }
 
+.dropdown-section.calendar {
+  padding-left: 0;
+}
+.dropdown-section.calendar .container .top .dropdown {
+  width: 340px;
+  height: 354px;
+}
+.dropdown-section.calendar .container .top .dropdown .items .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  height: 0;
+}
+.dropdown-section.calendar .container .top .dropdown .items .title .left-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  width: 46px;
+  height: 46px;
+}
+.dropdown-section.calendar .container .top .dropdown .items .title .left-arrow:hover {
+  background-color: #f2f2f2;
+  border: 1px solid #212529;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.dropdown-section.calendar .container .top .dropdown .items .title .right-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  width: 46px;
+  height: 46px;
+}
+.dropdown-section.calendar .container .top .dropdown .items .title .right-arrow:hover {
+  background-color: #f2f2f2;
+  border: 1px solid #212529;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.dropdown-section.calendar .container .top .dropdown .items .week-days {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.dropdown-section.calendar .container .top .dropdown .items .week-days span {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #6b6d70;
+}
+.dropdown-section.calendar .container .top .dropdown .items .calendar-days {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 0px;
+  padding-right: 0px;
+  gap: 3px;
+}
+.dropdown-section.calendar .container .top .dropdown .items .calendar-days .calendar-btn.grey {
+  color: #8f9193;
+}
+.dropdown-section.calendar .container .top .dropdown .items .calendar-days .calendar-btn {
+  width: 46px;
+  height: 48px;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #212529;
+}
+.dropdown-section.calendar .container .top .dropdown .items .calendar-days .calendar-btn:hover {
+  background-color: #f2f2f2;
+  border: 1px solid #212529;
+  border-radius: 6px;
+}
+
 @media (min-width: 800px) {
   .dropdown-section .container {
     display: flex;
