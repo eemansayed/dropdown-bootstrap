@@ -435,6 +435,93 @@ body {
   }
 }
 
+.dropdown-section.features {
+  .container {
+    .top {
+      .dropdown {
+        width: 600px;
+        height: 160px;
+        .items {
+          display: flex;
+          flex-direction: row;
+          gap: 40px;
+          .left {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-left: 20px;
+            padding-top: 8px;
+            width: 50%;
+
+            .features-box {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              border: 1px solid transparent;
+              padding-left: 10px;
+              padding-top: 5px;
+              padding-bottom: 5px;
+
+              &:hover {
+                border-radius: 4px;
+                border: 1px solid #0d6efd;
+                background-color: #f8f9fa;
+                color: #0d6efd;
+                cursor: pointer;
+              }
+
+              .icon {
+                width: 32px;
+                height: 32px;
+
+                svg {
+                  width: 32px;
+                  height: 32px;
+                  color: #212529;
+                }
+              }
+              .product-info {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .heading {
+                  h1 {
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #212529;
+                    width: 100%;
+                  }
+                }
+
+                .info {
+                  p {
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #262a2e;
+                  }
+                }
+              }
+            }
+          }
+
+          .right {
+            span {
+              color: #2d3034;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 800px) {
   .dropdown-section {
     .container {
